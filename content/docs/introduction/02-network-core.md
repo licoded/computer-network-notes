@@ -8,7 +8,7 @@ draft: false
 images: []
 menu:
   docs:
-    parent: "intro"
+    parent: "introduction"
 weight: 630
 toc: true
 ---
