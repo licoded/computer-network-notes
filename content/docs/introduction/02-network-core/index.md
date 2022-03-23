@@ -40,16 +40,16 @@ Let's unpack that last statement just a little bit because we actually heard a l
 There are two key functions performed inside the network core **forwarding**, sometimes also known as **switching**, and **routing**. Let's take a look inside a router so we can see what those functions are. **Forwarding** is a local action, it's about moving arriving packets from router's input link to appropriate router output link. **Forwarding** is controled by the forwarding table inside each and every of the millions of routes in the Internet. When a packet arrives a router will look inside the packet for a destination address and then look up the destination address in its forwarding table and then transmit that incoming packet on the output link that leads to that destination. Well, that's pretty simple conceptually, lookup and forwarding. But you might be wondering how are the contents of that forwarding table created int the first place and that's where we encounter the second key function of the network core -- **routing**. **Routing** is a global action of determining the source to destination path taken by packets. As we'll see routing algorithms compute these paths and compute the local per router forwarding tables needed to realize this end-to-end forwarding path.
 
 {{< details "A good analogy for understanding the difference between forwarding and routing" >}}
-![routing](routing.jpg "routing")
+{{< figure src="routing.jpg" caption="routing" width="80%" class="tac" >}}
 Think about taking a trip in a car. I decide to take this upper route here rather than this lower route here and that's the routing decision that's made the path that's taken from the source to destination. Now when I get to an interchange, I'm coming into the city on one of the input roads and I need to be forwarded out of the city on an output road in Cleveland here and really at all intersections along the way that switching from an input road to an output road is the local forwarding function with the global routing function(forwarding table) determining which the output roads I'm actually forwarded onto.
-![forwarding](forwarding.jpg "forwarding")
+{{< figure src="forwarding.jpg" caption="forwarding" width="80%" class="tac" >}}
 {{< /details >}}
 
 ### Store and Forward
 
 Let's next focus on the transmission of packet bits at a router in the network core.
 
-![store and forward](store-and-forward.jpg "store and forward")
+{{< figure src="store-and-forward.jpg" caption="store and forward" width="80%" class="tac" >}}
 
 - **packet transmission delay:** takes L/R seconds to transmit (push out) L-bit packet into link at R bps
 - **store and forward:** entire packet must arrive at router before it can be transmitted on next link
@@ -61,7 +61,7 @@ Let's next focus on the transmission of packet bits at a router in the network c
 
 Now let's take a closer look at what happens as packet arrived to a router for forwarding.
 
-![router forwarding quque](router-forwarding-quque.jpg "router forwarding quque(A->C, B->E)")
+{{< figure src="router-forwarding-quque.jpg" caption="router forwarding quque(A->C, B->E)" width="80%" class="tac" >}}
 
 Let's take a close look at the input link rates. The transmission rate R of the link from A to the first hop router is 100 Mb/s as is the second link from B to the first hop router. But the transmission rate of the link from the first hop router to the second hop router is only 1.5 Mb/s.
 
@@ -89,7 +89,7 @@ Well, packet switching is not the only way to build a network. And indeed long b
 
 In circuit switching, there's a notion of a call rather than a notion of packets that flow from source to destination. Before a call starts, all of the resources within the network that are going to be needed for that call are allocated to that call from source to destination. So once the call begins the call will have reserved enough transmission capacity for itself to ensure that queuing will never occur. There's no delay other than propagation delay and no loss of data within the network because link capacity has been reserved for the exclusive use of this call.
 
-{{< figure src="circuit-switching.jpg" caption="Alternative to packet switching: circuit switching" width="50%" >}}
+{{< figure src="circuit-switching.jpg" caption="Alternative to packet switching: circuit switching" width="30%" class="tac" >}}
 
 In this diagram here each link has four circuits. The call from the top left to the bottom right is allocated the second circuit on the top link. And the first circuit on the right link the circuits are dedicated resources. They're not shared with any other users. It's really like there's a wire from source to destination.
 
