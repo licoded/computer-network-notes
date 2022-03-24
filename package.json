@@ -15,6 +15,7 @@
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
     "prestart": "npm run clean",
     "start": "exec-bin node_modules/.bin/hugo/hugo server  --bind=0.0.0.0 --disableFastRender",
+    "start-s": "exec-bin node_modules/.bin/hugo/hugo server  --baseURL 49.232.17.225 --bind=0.0.0.0 --disableFastRender --destination public",
     "prebuild": "npm run clean",
     "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
     "build:preview": "npm run build -D -F",
