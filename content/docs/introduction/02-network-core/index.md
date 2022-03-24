@@ -92,3 +92,29 @@ In **circuit switching**, there's a notion of *a call* rather than a notion of *
 In this diagram, each link has four circuits. The call from the top left to the bottom right is allocated the second circuit on the top link and the first circuit on the right link. The circuits are dedicated resources, they're not shared with any other users, it's really like there's a wire from source to destination.
 
 So all this sounds pretty good, no delays, no loss, doesn't get any better than that. Until you start to think about the fact that since resources are reserved for the exclusive use of a call, but the circuits can go idle if there's no data to send on that call and there's the rub if the bandwidth isn't used by the call. It's lost, no one else and no other calls can use it, and so a circuit switch network can be inefficient.
+
+### Multiplexing
+
+{{< blown >}}
+**Frequency Division Multiplexing (FDM)**
+{{</ blown >}}
+
+- optical, electromagnetic frequencies divided into narrow frequency bands
+- each call allocated its own band, can transmit at max rate of tha narrow band
+
+{{< blown >}}
+**Time Division Multiplexing (TDM)**
+{{</ blown >}}
+
+- time divided into slots
+- each call allocated periodic slot(s), can transmit at maximum rate of wider frequency band only during its time slot(s)
+
+{{< figure src="multiplexing.png" width="40%" class="tac" >}}
+
+### Packet Switching Versus Circuit Switching
+
+[Bilibili: Packet Switching Versus Circuit Switching →](https://www.bilibili.com/video/BV1RN411d7gr?p=3&t=647.4)
+
+## A Network of Networks
+
+[Bilibili: A Network of Networks →](https://www.bilibili.com/video/BV1RN411d7gr?p=3&t=863.3)
