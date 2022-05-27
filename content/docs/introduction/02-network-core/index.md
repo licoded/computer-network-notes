@@ -95,16 +95,16 @@ So all this sounds pretty good, no delays, no loss, doesn't get any better than 
 
 ### Multiplexing
 
-{{< blown >}}
+{{< brown >}}
 **Frequency Division Multiplexing (FDM)**
-{{</ blown >}}
+{{</ brown >}}
 
 - optical, electromagnetic frequencies divided into narrow frequency bands
 - each call allocated its own band, can transmit at max rate of tha narrow band
 
-{{< blown >}}
+{{< brown >}}
 **Time Division Multiplexing (TDM)**
-{{</ blown >}}
+{{< /brown >}}
 
 - time divided into slots
 - each call allocated periodic slot(s), can transmit at maximum rate of wider frequency band only during its time slot(s)
